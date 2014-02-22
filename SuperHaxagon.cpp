@@ -107,9 +107,9 @@ struct SuperHexagonApi
 	struct Wall
 	{
 		DWORD slot;
-		DWORD distance;
-		BYTE enabled;
-		BYTE fill1[3];
+		DWORD distance;  // Should be signed integer as well!
+		BYTE enabled;  // Actually, these 4 bytes make up a signed integer containing the width of a wall!
+		BYTE fill1[3];  // Actually, these 4 bytes make up a signed integer containing the width of a wall!
 		DWORD unk2;
 		DWORD unk3;
 	};
